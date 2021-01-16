@@ -45,7 +45,7 @@ const HomeScreen = () => {
     const addToSavedList = (movieTitle) => {
         setSavedList([...savedList, movieTitle]);
 
-        localStorage.setItem('savedList', JSON.stringify([...savedList, movieTitle]))
+        localStorage.setItem('savedList', JSON.stringify([...savedFromStorage, movieTitle]))
     };
 
     const removeFromSavedList = (title) => {
@@ -64,24 +64,23 @@ const HomeScreen = () => {
     // }
 
     return (
-        <div>
-            <input type='text' value={title} onChange={search} placeholder='search for movie title'></input>
 
+        <>
+            <input type='text' value={title} onChange={search} placeholder='search for movie title...'></input>
             <Nominations savedList={savedList} removeFromSavedList={removeFromSavedList} savedFromStorage={savedFromStorage} />
 
-            <div className='movie-container'>
-                {title && movies &&
-                    movies.map((movie, idx) =>
+            {(!movies) && (title) ? <h3 className='searching'>Searching...</h3> : (<div>
+                <div className='movie-container'>
+                    {title && movies &&
+                        movies.map((movie, idx) =>
 
-                        <MovieCard movie={movie}
-                            addToSavedList={addToSavedList} savedList={savedList} savedFromStorage={savedFromStorage} key={idx} />
+                            <MovieCard movie={movie}
+                                addToSavedList={addToSavedList} savedList={savedList} savedFromStorage={savedFromStorage} key={idx} />
+                        )}
+                </div>
+            </div>)}
 
-                    )}
-            </div>
-
-
-
-        </div>
+        </>
 
     )
 }

@@ -1,12 +1,17 @@
 import React from 'react'
 
-const Nominations = ({ savedList, removeFromSavedList, savedFromStorage }) => {
+const Nominations = ({ removeFromSavedList, savedFromStorage }) => {
 
 
-    console.log(savedList, 'nom');
+
+
 
     return (
+
+
         <div className='nominations-container'>
+
+            {savedFromStorage.length > 0 ? <h3>Nominations: </h3> : ''}
 
             {savedFromStorage.map((savedTitle) =>
 
@@ -19,11 +24,11 @@ const Nominations = ({ savedList, removeFromSavedList, savedFromStorage }) => {
             }
 
             {
-                savedList.length >= 5 ? <h4 className='nomination-limit'>You Have Reached the Nomination Limit of 5 Movies</h4> : ''
+                savedFromStorage.length >= 5 ? <h4 className='nomination-limit'>You Have Reached the Nomination Limit of 5 Movies</h4> : ''
             }
-
-
         </div>
+
+
     )
 }
 
