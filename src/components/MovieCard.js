@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import placeholder from '../images/placeholder.png'
 
@@ -15,7 +16,16 @@ const MovieCard = ({ movie, addToSavedList, savedFromStorage }) => {
 
         <div className='movie-card' key={movie.imdbID}>
             <h4>{movie.Title}</h4>
-            <img src={movie.Poster === "N/A" ? placeholder : movie.Poster} />
+
+            <div className='movie-img'>
+                <Link to={`/movies/${movie.imdbID}`}>
+                    <img src={movie.Poster === "N/A" ? placeholder : movie.Poster} />
+                </Link>
+
+                <div className='img-hover'>
+                    <p>Movie Details</p>
+                </div>
+            </div>
             <h5>{movie.Year}</h5>
 
             <div className='btn-container'>

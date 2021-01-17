@@ -81,6 +81,32 @@ h1{
   height: 260px;
   transition: ease-in 0.2s;
 
+
+}
+
+.img-hover{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  max-width: 180px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.6)
+}
+
+.movie-img:hover .img-hover{
+  
+
+    opacity: 1;
+  
+}
+
+.movie-img {
+  position: relative;
+  width: 100%;
 }
 
 .movie-card h5{
