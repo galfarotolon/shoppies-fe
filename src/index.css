@@ -281,8 +281,9 @@ h1{
 
 .details-container{
   display: flex;
-  margin: 50px;
+  margin: 30px 50px 0;
 }
+
 
 
 .details-info{
@@ -292,4 +293,12 @@ h1{
   width: 80%;
 
   margin: 0 auto;
+}
+
+@media (max-width: 768px){
+ 
+  .details-container{
+    flex-direction: column;
+    margin: 30px;
+  }
 }
