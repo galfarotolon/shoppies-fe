@@ -56,17 +56,10 @@ const HomeScreen = () => {
     }
 
 
-
-
-
-    // if (!movies) {
-    //     return <div>Loading movie information...</div>;
-    // }
-
     return (
 
         <>
-            <input type='text' value={title} onChange={search} placeholder='search for movie title...'></input>
+            <input className='search-bar' type='text' value={title} onChange={search} placeholder='search for movie title...'></input>
             <Nominations savedList={savedList} removeFromSavedList={removeFromSavedList} savedFromStorage={savedFromStorage} />
 
             {(!movies) && (title) ? <h3 className='searching'>Searching...</h3> : (<div>

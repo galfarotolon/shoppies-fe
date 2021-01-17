@@ -13,8 +13,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Welcome to The Shoppies!</h1>
-      <p>Choose your favorite films and nominate them! You can nominate 5 films. Search for the titles below: </p>
+      <h1>The Shoppies</h1>
+      <p>Welcome to The Shoppies! Choose your favorite films and nominate them. You can nominate 5 films. </p>
+      <p>Search for titles: </p>
       <HomeScreen />
     </div>
   );

@@ -19,7 +19,9 @@ const MovieCard = ({ movie, addToSavedList, savedFromStorage }) => {
             <h5>{movie.Year}</h5>
 
             <div className='btn-container'>
-                <button onClick={() => addToSavedList(movie.Title)} disabled={savedFromStorage.includes(movie.Title) || savedFromStorage.length >= 5}>Nominate</button>
+                <button className='save-btn' onClick={() => addToSavedList(movie.Title)}
+                    disabled={savedFromStorage.includes(movie.Title) || savedFromStorage.length >= 5}>
+                    Nominate</button>
             </div>
         </div>
 
