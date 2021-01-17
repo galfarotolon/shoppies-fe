@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
+import placeholder from '../images/placeholder.png'
+
 const MovieDetails = () => {
 
     const [movieDetails, setMovieDetails] = useState();
@@ -13,13 +15,18 @@ const MovieDetails = () => {
 
             .then(res => {
                 console.log(res.data, 'res');
+                setMovieDetails(res.data)
             })
 
             .catch(err => { console.log(err) })
     }, [])
     return (
-        <div>
-            hello from movie details
+        <div className='movie-Details-container'>
+            {
+                movieDetails && (<h2>{movieDetails.Title}</h2>)
+            }
+
+
         </div>
     )
 }

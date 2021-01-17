@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import { Route, Switch, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 //components
 import HomeScreen from './components/HomeScreen.js'

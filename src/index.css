@@ -76,13 +76,7 @@ h1{
   max-width: 180px;
 }
 
-.movie-card img:hover{
-  max-width: 200px;
-  height: 260px;
-  transition: ease-in 0.2s;
 
-
-}
 
 .img-hover{
   position: absolute;
@@ -94,20 +88,26 @@ h1{
   max-width: 180px;
   opacity: 0;
   transition: .5s ease;
-  background-color: rgba(0, 0, 0, 0.6)
+  background-color: rgba(51, 51, 51, 0.699);
+  width: 170px;
+}
+
+.img-hover p{
+  color: white;
+  margin-top: 110px;
 }
 
 .movie-img:hover .img-hover{
   
-
     opacity: 1;
-  
+ 
 }
 
 .movie-img {
-  position: relative;
+ 
   width: 100%;
-}
+  position: relative;
+} 
 
 .movie-card h5{
   margin-bottom: 10px;
@@ -157,12 +157,15 @@ h1{
   }
 
 
-  
-.movie-card img:hover{
-  height: 190px;
-  max-width: 150px;
-}
+  .img-hover{
+    height: 190px;
+    width: 130px;
+  }
 
+  .img-hover p{
+    margin-top: 80px;
+  }
+  
 .movie-card h5{
   margin-bottom: 0;
 }
@@ -192,7 +195,6 @@ h1{
 
 
   }
-
 
   
 }
