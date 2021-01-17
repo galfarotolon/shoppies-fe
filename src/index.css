@@ -277,3 +277,19 @@ h1{
     margin-right: 10px;
   }
 }
+
+
+.details-container{
+  display: flex;
+  margin: 50px;
+}
+
+
+.details-info{
+
+}
+.details-info p{
+  width: 80%;
+
+  margin: 0 auto;
+}
