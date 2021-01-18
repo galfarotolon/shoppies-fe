@@ -287,12 +287,20 @@ h1{
 
 
 .details-info{
+  text-align: left;
 
 }
+
+.details-info h2{
+  margin-left: 100px;
+}
+
+
 .details-info p{
   width: 80%;
 
-  margin: 0 auto;
+
+  margin: 15px auto;
 }
 
 @media (max-width: 768px){
@@ -300,5 +308,9 @@ h1{
   .details-container{
     flex-direction: column;
     margin: 30px;
+  }
+
+  .details-info{
+    text-align:center;
   }
 }

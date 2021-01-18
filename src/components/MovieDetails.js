@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
-import imdb from '../images/imdb.svg'
 
 const MovieDetails = () => {
 
@@ -42,21 +41,21 @@ const MovieDetails = () => {
                         <div className='details-info'>
                             <h2>{movieDetails.Title}</h2>
 
-                            <p>{movieDetails.Year}</p>
-                            <p>{movieDetails.Runtime}</p>
+                            <p><strong>Year Released: </strong>{movieDetails.Year}</p>
+                            <p><strong>Runtime: </strong>{movieDetails.Runtime}</p>
 
 
-                            <h5>{movieDetails.Genre}</h5>
-                            <p>{movieDetails.Plot}</p>
-                            <p>{movieDetails.Actors}</p>
-                            <p>{movieDetails.BoxOffice}</p>
-                            <p>{movieDetails.Director}</p>
-                            <p>{movieDetails.Rated}</p>
+                            <p><strong>Genre: </strong>{movieDetails.Genre}</p>
+                            <p><strong>Plot: </strong>{movieDetails.Plot}</p>
+                            <p><strong>Main Cast: </strong> {movieDetails.Actors}</p>
+                            <p><strong>Box Office: </strong> {movieDetails.BoxOffice}</p>
+                            <p><strong>Directed by: </strong> {movieDetails.Director}</p>
+                            <p><strong>Rating: </strong> {movieDetails.Rated}</p>
 
 
-                            <p>{movieDetails.Awards}</p>
-                            <p>{movieDetails.Writer}</p>
-                            <p>{movieDetails.Production}</p>
+                            <p><strong>Awards and Nominations: </strong> {movieDetails.Awards}</p>
+                            <p><strong>Writers: </strong>{movieDetails.Writer}</p>
+                            <p><strong>Produced by: </strong> {movieDetails.Production}</p>
 
 
 
