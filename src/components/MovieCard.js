@@ -7,7 +7,10 @@ import placeholder from '../images/placeholder.png'
 const MovieCard = ({ movie, addToSavedList, savedFromStorage }) => {
 
 
-    savedFromStorage = []
+
+
+
+    savedFromStorage ? savedFromStorage : []
 
 
     console.log(movie);
