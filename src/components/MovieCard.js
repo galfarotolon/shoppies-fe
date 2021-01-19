@@ -8,13 +8,11 @@ const MovieCard = ({ movie, addToSavedList, savedFromStorage }) => {
 
 
 
+    savedFromStorage = []
 
+    // savedFromStorage = JSON.parse(localStorage.getItem('saved'))
 
-    if (!savedFromStorage) {
-        savedFromStorage = []
-    } else {
-        savedFromStorage = JSON.parse(localStorage.getItem('saved'))
-    }
+    savedFromStorage = JSON.parse(localStorage.getItem('saved'))
 
 
     console.log(movie);
