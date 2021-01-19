@@ -39,19 +39,20 @@ const HomeScreen = () => {
 
     let savedFromStorage = []
 
-    savedFromStorage = JSON.parse(localStorage.getItem('savedList'))
+    savedFromStorage = JSON.parse(localStorage.getItem('saved'))
 
 
     const addToSavedList = (movieTitle) => {
         setSavedList([...savedList, movieTitle]);
 
-        localStorage.setItem('savedList', JSON.stringify([...savedFromStorage, movieTitle]))
+
+        localStorage.setItem('saved', JSON.stringify([...savedList, movieTitle]))
     };
 
     const removeFromSavedList = (title) => {
         setSavedList(savedList.filter(movie => movie !== title))
 
-        localStorage.setItem('savedList', JSON.stringify(savedFromStorage.filter(movie => movie !== title)))
+        localStorage.setItem('saved', JSON.stringify(savedFromStorage.filter(movie => movie !== title)))
 
     }
 
