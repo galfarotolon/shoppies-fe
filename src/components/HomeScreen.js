@@ -37,8 +37,9 @@ const HomeScreen = () => {
     }
 
 
+    let savedFromStorage = []
 
-    const savedFromStorage = JSON.parse(localStorage.getItem('savedList'))
+    savedFromStorage = JSON.parse(localStorage.getItem('savedList'))
 
 
     const addToSavedList = (movieTitle) => {
