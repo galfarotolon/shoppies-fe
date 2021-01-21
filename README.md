@@ -1,6 +1,6 @@
 # Shoppies Technical Challenge
 
-- Deployed Site Here: 
+- Deployed Site Here: https://shoppies-fe.vercel.app/
 
 - This project is a technical challenge for the 2021 Shopify Summer Internship position. 
 - The user can search for 5 films and nominate them. 
