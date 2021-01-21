@@ -144,6 +144,39 @@ h1{
 }
 
 
+@media (max-width: 1200px){
+  .movie-card{
+    width: 20%;
+    height: 300px;
+  
+  }
+
+  .movie-card img{
+    height: 190px;
+    width: 130px;
+    max-width: 150px;
+  
+  }
+
+
+  .img-hover{
+    height: 190px;
+    width: 130px;
+  }
+
+  .movie-card h5{
+    margin-bottom: 0;
+  }
+
+  .save-btn{
+    width: 100px;
+    height: 20px;
+   
+  }
+
+}
+
+
 @media (max-width: 900px){
   .movie-card{
     width: 30%;
@@ -173,11 +206,7 @@ h1{
 }
 
 
-.save-btn{
-  width: 100px;
-  height: 20px;
- 
-}
+
 }
 
 
@@ -312,6 +341,10 @@ h1{
   border: none;
   cursor: pointer;
 }
+/* 
+.details-info button:focus{
+  outline: none;
+} */
 
 .details-info p{
   width: 80%;

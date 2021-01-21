@@ -3,14 +3,12 @@ import axios from 'axios'
 import MovieCard from './MovieCard'
 import Nominations from './Nominations'
 
+
 const HomeScreen = () => {
 
     const [movies, setMovies] = useState([])
     const [title, setTitle] = useState('')
     const [savedList, setSavedList] = useState([]);
-
-
-
 
 
     useEffect(() => {
