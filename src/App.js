@@ -21,8 +21,6 @@ function App() {
         <HomeScreen />
       </Route>
       <Route path="/movies/:id" component={MovieDetails} />
-
-
     </div>
   );
 }

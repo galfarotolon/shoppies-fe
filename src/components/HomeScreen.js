@@ -12,32 +12,25 @@ const HomeScreen = () => {
 
 
 
+
+
     useEffect(() => {
-        // axios.get(`http://www.omdbapi.com/?t=${title}&apikey=${process.env.REACT_APP_API_KEY}&`)
-
         axios.get(`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${title || savedSearch}&type=movie&plot=full&r=json`)
-
-
             .then(res => {
                 setMovies(res.data.Search)
             })
-
             .catch(err => {
                 console.log(err);
             })
-
     }, [title])
 
 
     const search = (e) => {
-
         setTitle(e.target.value)
         localStorage.setItem('search', JSON.stringify(e.target.value))
     }
 
     const savedSearch = JSON.parse(localStorage.getItem('search'))
-
-
 
     let savedFromStorage = []
 
@@ -45,7 +38,6 @@ const HomeScreen = () => {
 
     const addToSavedList = (movieTitle) => {
         setSavedList([...savedList, movieTitle]);
-
 
         localStorage.setItem('saved', JSON.stringify([...savedList, movieTitle]))
     };

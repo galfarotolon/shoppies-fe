@@ -39,7 +39,7 @@ const MovieDetails = () => {
                     <div className='details-info'>
 
                         <h2>{movieDetails.Title}</h2>
-                        <button onClick={() => history.push('/')} ><i className="far fa-times-circle fa-2x"></i></button>
+                        <button onClick={() => history.push('/')}><i className="far fa-times-circle fa-2x"></i></button>
 
                         <p><strong>Year Released: </strong>{movieDetails.Year}</p>
                         <p><strong>Runtime: </strong>{movieDetails.Runtime}</p>
