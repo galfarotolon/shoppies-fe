@@ -3,11 +3,6 @@ import React from 'react'
 const Nominations = ({ removeFromSavedList, savedFromStorage }) => {
 
 
-    // savedFromStorage = []
-
-    // savedFromStorage = JSON.parse(localStorage.getItem('saved'))
-
-
 
     savedFromStorage === null ? savedFromStorage = [] : savedFromStorage = JSON.parse(localStorage.getItem('saved'))
 

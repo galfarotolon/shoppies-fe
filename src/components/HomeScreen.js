@@ -20,7 +20,6 @@ const HomeScreen = () => {
 
 
             .then(res => {
-                console.log(res.data.Search);
                 setMovies(res.data.Search)
             })
 
