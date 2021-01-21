@@ -11,6 +11,7 @@ const HomeScreen = () => {
     const [savedList, setSavedList] = useState([]);
 
 
+
     useEffect(() => {
         // axios.get(`http://www.omdbapi.com/?t=${title}&apikey=${process.env.REACT_APP_API_KEY}&`)
 
@@ -26,8 +27,6 @@ const HomeScreen = () => {
             })
 
     }, [title])
-
-    console.log(movies);
 
 
     const search = (e) => {

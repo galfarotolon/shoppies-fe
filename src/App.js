@@ -2,8 +2,8 @@ import './App.css';
 import { Route } from 'react-router-dom';
 
 //components
-import HomeScreen from './components/HomeScreen.js'
-import MovieDetails from './components/MovieDetails.js'
+import HomeScreen from './components/HomeScreen.js';
+import MovieDetails from './components/MovieDetails.js';
 
 
 
@@ -20,7 +20,6 @@ function App() {
         <p>Search for titles: </p>
         <HomeScreen />
       </Route>
-
       <Route path="/movies/:id" component={MovieDetails} />
 
 

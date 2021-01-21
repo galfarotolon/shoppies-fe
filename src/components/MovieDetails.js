@@ -52,9 +52,6 @@ const MovieDetails = () => {
                         <p><strong>Awards and Nominations: </strong> {movieDetails.Awards}</p>
                         <p><strong>Writers: </strong>{movieDetails.Writer}</p>
                         <p><strong>Produced by: </strong> {movieDetails.Production}</p>
-
-
-
                     </div>
                 </>
 

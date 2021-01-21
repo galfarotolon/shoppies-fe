@@ -9,13 +9,9 @@ const MovieCard = ({ movie, addToSavedList, savedFromStorage }) => {
 
     savedFromStorage === null ? savedFromStorage = [] : savedFromStorage = JSON.parse(localStorage.getItem('saved'))
 
-
     return (<>
-
-
         <div className='movie-card' key={movie.imdbID}>
             <h4>{movie.Title}</h4>
-
             <div className='movie-img'>
                 <Link to={`/movies/${movie.imdbID}`}>
                     <img src={movie.Poster === "N/A" ? placeholder : movie.Poster} />
