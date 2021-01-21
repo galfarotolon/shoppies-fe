@@ -73,6 +73,7 @@ h1{
 
 .movie-card img{
   height: 250px;
+  width: 170px;
   max-width: 180px;
 }
 
@@ -152,6 +153,7 @@ h1{
 
   .movie-card img{
     height: 190px;
+    width: 130px;
     max-width: 150px;
   
   }
@@ -281,7 +283,12 @@ h1{
 
 .details-container{
   display: flex;
-  margin: 30px 50px 0;
+  margin: 30px 30px 0;
+  background-color: rgba(243, 239, 239, 0.911);
+  padding: 10px;
+  box-shadow: 0 0 50px  rgb(0, 0, 0);
+  border-radius: 5px;
+
 }
 
 
@@ -292,9 +299,19 @@ h1{
 }
 
 .details-info h2{
-  margin-left: 100px;
+
+  width: 80%;
+  margin: 15px auto;
+
 }
 
+.details-info button{
+  position:absolute; 
+  top: 40px;
+  right:40px; 
+  border: none;
+  cursor: pointer;
+}
 
 .details-info p{
   width: 80%;

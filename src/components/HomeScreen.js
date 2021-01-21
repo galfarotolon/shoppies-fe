@@ -16,7 +16,7 @@ const HomeScreen = () => {
     useEffect(() => {
         // axios.get(`http://www.omdbapi.com/?t=${title}&apikey=${process.env.REACT_APP_API_KEY}&`)
 
-        axios.get(`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${title}&type=movie&plot=full&r=json`)
+        axios.get(`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${title || savedSearch}&type=movie&plot=full&r=json`)
 
 
             .then(res => {
@@ -29,16 +29,20 @@ const HomeScreen = () => {
 
     }, [title])
 
+    console.log(movies);
 
 
     const search = (e) => {
+
         setTitle(e.target.value)
+        localStorage.setItem('search', JSON.stringify(e.target.value))
     }
+
+    const savedSearch = JSON.parse(localStorage.getItem('search'))
+
 
 
     let savedFromStorage = []
-
-    // savedFromStorage = JSON.parse(localStorage.getItem('saved'))
 
     savedFromStorage = JSON.parse(localStorage.getItem('saved'))
 
@@ -60,7 +64,7 @@ const HomeScreen = () => {
     return (
 
         <>
-            <input className='search-bar' type='text' value={title} onChange={search} placeholder='search for movie title...'></input>
+            <input className='search-bar' type='text' value={title || savedSearch} onChange={search} placeholder='search for movie title...' />
             <Nominations savedList={savedList} removeFromSavedList={removeFromSavedList} savedFromStorage={savedFromStorage} />
 
             {(!movies) && (title) ? <h3 className='searching'>Searching...</h3> : (<div>
@@ -68,8 +72,8 @@ const HomeScreen = () => {
                     {title && movies &&
                         movies.map((movie, idx) =>
 
-                            <MovieCard movie={movie}
-                                addToSavedList={addToSavedList} savedList={savedList} savedFromStorage={savedFromStorage} key={idx} />
+                            <MovieCard movie={movie} addToSavedList={addToSavedList} savedList={savedList}
+                                savedFromStorage={savedFromStorage} key={idx} />
                         )}
                 </div>
             </div>)}
