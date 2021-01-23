@@ -1,7 +1,6 @@
 import './App.css';
 import { Route } from 'react-router-dom';
 
-//components
 import HomeScreen from './components/HomeScreen.js';
 import MovieDetails from './components/MovieDetails.js';
 
